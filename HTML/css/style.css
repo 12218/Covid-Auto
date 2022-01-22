@@ -21,8 +21,8 @@ div.title-bar {
     height: 70px;
     width: 100%;
     background-color: #242632;
-    font-family: 'Concert One', cursive;
-    font-size: 30px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 20px;
     color: white;
     line-height: 70px;
     /* padding-left: 30px; */
@@ -102,11 +102,10 @@ li.li-active {
 }
 
 /* content */
-div.content {
+/* div.content {
     float: right;
     background-color: #141214;
     width: calc(100% - 250px);
-    /* height: calc(100% - 70px); */
     height: 100%;
     overflow: scroll;
     overflow: auto;
@@ -114,10 +113,20 @@ div.content {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+} */
+div.content {
+    float: right;
+    background-color: #141214;
+    width: calc(100% - 250px);
+    /* height: calc(100% - 70px); */
+    height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-column-gap: 20px;
 }
-
 /* items */
-div.content .items {
+/* div.content .items {
     background-color: chocolate;
     margin: 30px;
     flex-basis: 250px;
@@ -127,4 +136,44 @@ div.content .items {
 div.content .items::after {
     content: "";
     flex: auto;
+} */
+
+/* items */
+div.content .items {
+    background-color: #242632;
+    border: 2px solid #33353F;
+    border-radius: 10px;
+    margin: 30px;
+    height: 200px;
+    width: 250px;
+    display: grid;
+    /* grid-template-rows: 3fr 7fr; */
+    grid-template-rows: 60px 140px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div.content .items:hover {
+    border: 2px solid #3281EA;
+}
+
+div.items div.item-title {
+    background-color: #242632;
+    line-height: 60px;
+    color: white;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    width: 100%;
+    border-bottom: 2px solid #454855;
+    padding-left: 10px;
+}
+
+div.items div.item-content {
+    background-color: #242632;
+    padding-left: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    color: white;
+    font-family: 'ZCOOL KuaiLe', cursive;
 }
