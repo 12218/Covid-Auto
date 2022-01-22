@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('../fonts/ZCOOL_KuaiLe/ZCOOLKuaiLe-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mochiy Pop P One';
+    src: url('../fonts/Mochiy_Pop_P_One/MochiyPopPOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: url('../fonts/Russo_One/RussoOne-Regular.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -155,10 +170,10 @@ div.content .items {
 
 div.content .items:hover {
     border: 2px solid #3281EA;
+    background-color: #383b46;
 }
 
 div.items div.item-title {
-    background-color: #242632;
     line-height: 60px;
     color: white;
     font-family: 'ZCOOL KuaiLe', cursive;
@@ -168,7 +183,6 @@ div.items div.item-title {
 }
 
 div.items div.item-content {
-    background-color: #242632;
     padding-left: 10px;
     width: 100%;
     display: grid;
