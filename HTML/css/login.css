@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('../fonts/ZCOOL_KuaiLe/ZCOOLKuaiLe-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: url(../images/background-login.png) no-repeat 0 0;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+}
+
+div.login-window {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    background-color: #24263298;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+form.login-form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+div.form-title {
+    font-size: 30px;
+    color: white;
+}
+
+input.form-username {
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    background-color: #4548558c;
+    color: white;
+    border-radius: 10px;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+}
+
+input.form-passwd {
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    background-color: #4548558c;
+    color: white;
+    border-radius: 10px;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+}
+
+input.button {
+    font-size: 25px;
+    height: 40px;
+    width: 100px;
+    background-color: #454855;
+    color: white;
+    border-radius: 10px;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+}
