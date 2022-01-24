@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from task.views import login_page
+from task.views import login_page, login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login_page, name = 'login_page'), # 登录页
+    path('login_page/', login_page, name = 'login_page'), # 登录页
+    path('login/', login, name = 'login'),
 ]
