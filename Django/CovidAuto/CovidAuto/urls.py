@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login_page/', login_page, name = 'login_page'), # 登录页
     path('login/', login, name = 'login'),
+    path('task/', include('task.urls')),
 ]
