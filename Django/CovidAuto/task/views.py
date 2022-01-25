@@ -26,6 +26,6 @@ def control_tasks(request):
     if request.user.username != '': # 如果登录成功
         context = {}
         context['tasks'] = Task.objects.filter(task_owner = request.user)
-        return render(request, 'task_base.html', context)
+        return render(request, 'task.html', context)
     else: # 如果未登录，则跳转登录界面
         return redirect('/login_page/')

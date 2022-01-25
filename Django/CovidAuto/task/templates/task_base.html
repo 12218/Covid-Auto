@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet"> -->
+    {% block header_extension %}
+    {% endblock %}
     <title>Covid-Auto</title>
 </head>
 <body>
@@ -47,5 +49,7 @@
             {% endfor %}
         </div>
     </div>
+    {% block body_extension %}
+    {% endblock %}
 </body>
 </html>

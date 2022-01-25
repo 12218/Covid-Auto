@@ -1,0 +1,46 @@
+{% extends 'task_base.html' %}
+
+<!-- {% block header_extension %}
+{% endblock %} -->
+
+{% block task_content %}
+    <div class="items">
+        <div class="item-title">濮阳</div>
+        <div class="item-content">
+            <div class="location-province">省份：河南省</div>
+            <div class="location-city">城市：濮阳市</div>
+            <div class="on-off">状态：已启用</div>
+        </div>
+    </div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+{% endblock %}
+<!-- 弹窗部分 -->
+{% block body_extension %}
+<div class="pop-window-background">
+    <div class="pop-window">
+        <form action="#" method="post" class="pop-window-form">
+            <div class="pop-window-on-or-off-div">
+                <input type="checkbox" class="pop-window-on-or-off"> 是否启用
+                <div class="close-window"></div>
+            </div>
+            <div class="pop-window-title-div">
+                标题:   <input type="text" class="pop-window-title" value="123">
+            </div>
+            <div class="pop-window-province-div">
+                省份:   <input type="text" class="pop-window-province" value="456">
+            </div>
+            <div class="pop-window-city-div">
+                城市:   <input type="text" class="pop-window-city" value="789">
+            </div>
+            <div class="buttons-div">
+                <input type="submit" class="pop-window-submit" value="提交">
+                <input type="submit" class="pop-window-delete" value="删除">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

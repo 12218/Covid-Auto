@@ -191,3 +191,100 @@ div.items div.item-content {
     color: white;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
+
+/* 弹窗样式 */
+div.pop-window-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4143509b;
+}
+
+div.pop-window {
+    width: 500px;
+    height: 400px;
+    background-color: #454855;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form.pop-window-form {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+form.pop-window-form div {
+    height: 20%;
+    line-height: 100px;
+    font-size: 25px;
+}
+
+form.pop-window-form input[type="text"] {
+    width: 80%;
+    height: 30px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 25px;
+    background-color: #4548558c;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+}
+
+form.pop-window-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+form.pop-window-form input[type="submit"] {
+    width: 60px;
+    height: 40px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: white;
+    font-size: 25px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+div.close-window {
+    position: absolute;
+    display: inline-block;
+    height: 20px !important;
+    width: 20px !important;
+    background: rgb(204, 67, 42) url(/static/icons/icon-close.png) no-repeat 0px 0px;
+    background-size: 20px 20px;
+    border-radius: 5px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+div.close-window:hover {
+    background-color: tomato;
+}
+
+input.pop-window-submit {
+    background-color: #3281EA;
+}
+
+input.pop-window-submit:hover {
+    background-color: #3282ea98;
+}
+
+input.pop-window-delete {
+    background-color: #ea5732;
+}
+
+input.pop-window-delete:hover {
+    background-color: #ea573294;
+}
