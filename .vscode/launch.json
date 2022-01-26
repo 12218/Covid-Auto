@@ -8,7 +8,8 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/Django/CovidAuto/manage.py",
+            // "program": "${workspaceFolder}/Django/CovidAuto/manage.py",
+            "program": "${workspaceFolder}/Django/CovidAuto-Change/manage.py",
             "args": [
                 "runserver"
             ],

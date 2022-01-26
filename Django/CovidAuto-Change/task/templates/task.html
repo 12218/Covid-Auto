@@ -1,0 +1,44 @@
+{% extends 'task_base.html' %}
+
+{% block header_extension %}
+<script type="text/javascript" src="/static/js/task.js"></script>
+{% endblock %}
+
+{% block task_content %}
+    {% for task in tasks %}
+        <div class="items" onclick="popWindow(this)">
+            <div class="item-title"><span>{{ task.id }}</span> : {{ task.task_title }}</div>
+            <div class="item-content">
+                <div class="location-province">省份:{{ task.task_province }}</div>
+                <div class="location-city">城市:{{ task.task_city }}</div>
+                <div class="on-off">状态:{{ task.on_or_off }}</div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+<!-- 弹窗部分 -->
+{% block body_extension %}
+<div class="pop-window-background" id="window-background">
+    <div class="pop-window">
+        <form action="#" method="post" class="pop-window-form">
+            <div class="pop-window-on-or-off-div">
+                <input type="checkbox" class="pop-window-on-or-off"> 是否启用
+                <div class="close-window" onclick="closeWindow()"></div>
+            </div>
+            <div class="pop-window-title-div">
+                标题:   <input type="text" class="pop-window-title" value="123">
+            </div>
+            <div class="pop-window-province-div">
+                省份:   <input type="text" class="pop-window-province" value="456">
+            </div>
+            <div class="pop-window-city-div">
+                城市:   <input type="text" class="pop-window-city" value="789">
+            </div>
+            <div class="buttons-div">
+                <input type="submit" class="pop-window-submit" value="提交">
+                <input type="submit" class="pop-window-delete" value="删除">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
