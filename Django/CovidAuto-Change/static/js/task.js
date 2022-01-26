@@ -35,6 +35,10 @@ function popWindow(obj) {
     else if(ele5 == 'False') {
         checkbox_input.checked = false;
     }
+
+    var task_id = document.getElementsByClassName('task-id')[0];
+    // console.log(task_id.getAttribute('value'));
+    task_id.setAttribute('value', ele1);
     
     // var close_window = getElementsByClassName('close-window')[0];
 }

@@ -20,19 +20,21 @@
 {% block body_extension %}
 <div class="pop-window-background" id="window-background">
     <div class="pop-window">
-        <form action="#" method="post" class="pop-window-form">
+        <form action="{% url 'submit_tasks' %}" method="post" class="pop-window-form">
+            {% csrf_token %}
+            <input type="hidden" class="task-id" name="task-id" value="000">
             <div class="pop-window-on-or-off-div">
-                <input type="checkbox" class="pop-window-on-or-off"> 是否启用
+                <input type="checkbox" class="pop-window-on-or-off" name="pop-window-on-or-off"> 是否启用
                 <div class="close-window" onclick="closeWindow()"></div>
             </div>
             <div class="pop-window-title-div">
-                标题:   <input type="text" class="pop-window-title" value="123">
+                标题:   <input type="text" class="pop-window-title" value="123" name="pop-window-title">
             </div>
             <div class="pop-window-province-div">
-                省份:   <input type="text" class="pop-window-province" value="456">
+                省份:   <input type="text" class="pop-window-province" value="456" name="pop-window-province">
             </div>
             <div class="pop-window-city-div">
-                城市:   <input type="text" class="pop-window-city" value="789">
+                城市:   <input type="text" class="pop-window-city" value="789" name="pop-window-city">
             </div>
             <div class="buttons-div">
                 <input type="submit" class="pop-window-submit" value="提交">
