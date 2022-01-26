@@ -194,6 +194,7 @@ div.items div.item-content {
 
 /* 弹窗样式 */
 div.pop-window-background {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
