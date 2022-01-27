@@ -4,6 +4,9 @@
 <script type="text/javascript" src="/static/js/task.js"></script>
 {% endblock %}
 
+<!-- 标签active -->
+{% block li_tasks %}<li class="icon-tasks li-active">My tasks</li>{% endblock %}
+
 {% block task_content %}
     {% for task in tasks %}
         <div class="items" onclick="popWindow(this)">

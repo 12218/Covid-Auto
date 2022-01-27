@@ -18,9 +18,9 @@
         <div class="title-bar"><span>COVID-AUTO</span></div>
         <div class="left-nav">
             <ul>
-                <li class="icon-tasks">My tasks</li>
-                <li class="icon-statistics">Statistics</li>
-                <li class="icon-user">Information</li>
+                {% block li_tasks %}<li class="icon-tasks" onclick="jumpTasks()">My tasks</li>{% endblock %}
+                {% block li_statistics %}<li class="icon-statistics" onclick="jumpStat()">Statistics</li>{% endblock %}
+                {% block li_info %}<li class="icon-user" onclick="jumpInfo()">Information</li>{% endblock %}
             </ul>
         </div>
         <div class="content">
@@ -53,5 +53,16 @@
     </div>
     {% block body_extension %}
     {% endblock %}
+    <script>
+        function jumpTasks() {
+            window.open("/task/", '_self')
+        }
+        function jumpStat() {
+            window.open("/task", '_self')
+        }
+        function jumpInfo() {
+            window.open("/task/info_page/", '_self')
+        }
+    </script>
 </body>
 </html>

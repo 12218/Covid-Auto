@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="/static/css/info.css">
 {% endblock %}
 
+<!-- 标签active -->
+{% block li_info %}<li class="icon-user li-active">Information</li>{% endblock %}
+
 {% block task_content %}
 <form action="{% url 'submit_info' %}" class="info-form" method="post">
     {% csrf_token %}
