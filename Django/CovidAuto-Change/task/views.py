@@ -1,8 +1,9 @@
 from audioop import reverse
 from django.shortcuts import redirect, render
 from django.template import context
-from .models import Task
+from .models import Task, Info
 from django.contrib import auth
+from django.contrib.auth.models import User
 
 # 登录页面
 def login_page(request):
@@ -90,6 +91,84 @@ def create_tasks(request):
             task.task_city = pop_window_city
             task.on_or_off = pop_window_on_or_off
             task.save()
+
+            return redirect('/task/')
+        except:
+            return redirect('https://bilibili.com') # 出现无法创建task错误
+    else: # 如果未登录，则跳转登录界面
+        return redirect('/login_page/')
+
+# information界面
+def info_page(request):
+    if request.user.username != '': # 如果登录成功
+
+        try:
+            context = {}
+            info = Info.objects.filter(task_owner = request.user)
+            if len(info) != 0: # 如果查询不成功，则新建
+                info = Info.objects.filter(task_owner = request.user)[0]
+                context['info'] = info
+            else:
+                info = Info()
+                info.task_owner = request.user
+                info.task_username = ''
+                info.task_stu_id = ''
+                info.task_phone = ''
+                info.task_institution = ''
+                info.task_form_id = ''
+                info.vjuid = ''
+                info.vjvd = ''
+                info.vt = ''
+                info.UUkey = ''
+                info.save()
+                # info = Info.objects.filter(task_owner = request.user)[0]
+            # context['task_username'] = info.task_username
+            # context['task_stu_id'] = info.task_stu_id
+            # context['task_phone'] = info.task_phone
+            # context['task_institution'] = info.task_institution
+            # context['task_form_id'] = info.task_form_id
+            # context['vjuid'] = info.vjuid
+            # context['vjvd'] = info.vjvd
+            # context['vt'] = info.vt
+            # context['UUkey'] = info.UUkey
+            
+
+            return render(request, 'info.html', context)
+        except:
+            return redirect('https://bilibili.com') # 出现无法创建task错误
+    else: # 如果未登录，则跳转登录界面
+        return redirect('/login_page/')
+
+# 修改info提交函数
+def submit_info(request):
+    if request.user.username != '': # 如果登录成功
+        info_username = request.POST.get('info-username', '')
+        info_password = request.POST.get('info-password', '')
+        info_stu_id = request.POST.get('info-stu_id', '')
+        info_phone = request.POST.get('info-phone', '')
+        info_institution = request.POST.get('info-institution', '')
+        info_form_id = request.POST.get('info-form_id', '')
+        info_vjuid = request.POST.get('info-vjuid', '')
+        info_vjvd = request.POST.get('info-vjvd', '')
+        info_vt = request.POST.get('info-vt', '')
+        info_UUkey = request.POST.get('info-UUkey', '')
+
+        try:
+            info = Info.objects.filter(task_owner = request.user)[0]
+            info.task_username = info_username
+            if info_password == '':
+                user = User.objects.get(username = request.user.username)
+            else:
+                pass
+            info.task_stu_id = info_stu_id
+            info.task_phone = info_phone
+            info.task_institution = info_institution
+            info.task_form_id = info_form_id
+            info.vjuid = info_vjuid
+            info.vjvd = info_vjvd
+            info.vt = info_vt
+            info.UUkey = info_UUkey
+            info.save()
 
             return redirect('/task/')
         except:

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('/static/fonts/ZCOOL_KuaiLe/ZCOOLKuaiLe-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mochiy Pop P One';
+    src: url('/static/fonts/Mochiy_Pop_P_One/MochiyPopPOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: url('/static/fonts/Russo_One/RussoOne-Regular.ttf');
+}
+
+div {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+form.info-form {
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    margin: 20px;
+}
+
+form.info-form input[type='text'], input[type='password'] {
+    font-size: 25px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: slategray;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+form.info-form input[type='submit'] {
+    width: 60px;
+    height: 40px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: white;
+    font-size: 25px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #3281EA;
+    margin-top: 10px;
+}

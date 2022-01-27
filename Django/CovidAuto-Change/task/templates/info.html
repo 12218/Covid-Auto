@@ -1,0 +1,45 @@
+{% extends 'task_base.html' %}
+
+{% block header_extension %}
+<link rel="stylesheet" href="/static/css/info.css">
+{% endblock %}
+
+{% block task_content %}
+<form action="{% url 'submit_info' %}" class="info-form" method="post">
+    {% csrf_token %}
+    <div class="info-username-div">
+        用户名<input type="text" value="{{ info.task_username }}" name="info-username">
+    </div>
+    <div class="info-password-div">
+        新密码<input type="text" value="" name="info-password">
+    </div>
+    <div class="info-stu_id-div">
+        学号<input type="text" value="{{ info.task_stu_id }}" name="info-stu_id">
+    </div>
+    <div class="info-phone-div">
+        电话号码<input type="text" value="{{ info.task_phone }}" name="info-phone">
+    </div>
+    <div class="info-institution-div">
+        学院<input type="text" value="{{ info.task_institution }}" name="info-institution">
+    </div>
+    <div class="info-form_id-div">
+        id<input type="text" value="{{ info.task_form_id }}" name="info-form_id">
+    </div>
+    <div class="info-vjuid-div">
+        vjuid<input type="text" value="{{ info.vjuid }}" name="info-vjuid">
+    </div>
+    <div class="info-vjvd-div">
+        vjvd<input type="text" value="{{ info.vjvd }}" name="info-vjvd">
+    </div>
+    <div class="info-vt-div">
+        vt<input type="text" value="{{ info.vt }}" name="info-vt">
+    </div>
+    <div class="info-UUkey-div">
+        UUkey<input type="text" value="{{ info.UUkey }}" name="info-UUkey">
+    </div>
+    <input type="submit" value="保存">
+</form>
+{% endblock %}
+
+{% block body_extension %}
+{% endblock %}
