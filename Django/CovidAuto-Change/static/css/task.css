@@ -289,3 +289,21 @@ input.pop-window-delete {
 input.pop-window-delete:hover {
     background-color: #ea573294;
 }
+
+/* 创建task按钮样式 */
+div.create-task-btn {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #454855 url(/static/icons/icon-close.png) no-repeat 0 0;
+    background-size: 50px 50px;
+    transform: rotate(45deg);
+}
+
+div.create-task-btn:hover {
+    background-color: #626572;
+}

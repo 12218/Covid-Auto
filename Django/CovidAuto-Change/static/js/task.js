@@ -47,3 +47,14 @@ function closeWindow() {
     var window = document.getElementById('window-background');
     window.style.display = 'none';
 }
+
+function createWindow() {
+    var window = document.getElementById('window-background');
+    window.style.display = 'block';
+    // 去掉删除task
+    var delete_btn = document.getElementsByClassName('pop-window-delete')[0];
+    delete_btn.remove();
+    // 更改表单提交action
+    var submit_btn = document.getElementsByClassName('pop-window-submit')[0];
+    submit_btn.setAttribute('formaction', "create_tasks/");
+}

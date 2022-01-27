@@ -70,3 +70,29 @@ def delete_tasks(request):
             return redirect('https://bilibili.com') # 出现无法删除task错误
     else: # 如果未登录，则跳转登录界面
         return redirect('/login_page/')
+
+# 创建task方法
+def create_tasks(request):
+    if request.user.username != '': # 如果登录成功
+        if request.POST.get('pop-window-on-or-off', 'False') == 'False':
+            pop_window_on_or_off = False
+        else:
+            pop_window_on_or_off = True
+        pop_window_title = request.POST.get('pop-window-title', '')
+        pop_window_province = request.POST.get('pop-window-province', '')
+        pop_window_city = request.POST.get('pop-window-city', '')
+
+        try:
+            task = Task() # 新建task
+            task.task_owner = request.user
+            task.task_title = pop_window_title
+            task.task_province = pop_window_province
+            task.task_city = pop_window_city
+            task.on_or_off = pop_window_on_or_off
+            task.save()
+
+            return redirect('/task/')
+        except:
+            return redirect('https://bilibili.com') # 出现无法创建task错误
+    else: # 如果未登录，则跳转登录界面
+        return redirect('/login_page/')

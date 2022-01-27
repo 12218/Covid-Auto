@@ -28,13 +28,13 @@
                 <div class="close-window" onclick="closeWindow()"></div>
             </div>
             <div class="pop-window-title-div">
-                标题:   <input type="text" class="pop-window-title" value="123" name="pop-window-title">
+                标题:   <input type="text" class="pop-window-title" value="" name="pop-window-title" placeholder="任务标题">
             </div>
             <div class="pop-window-province-div">
-                省份:   <input type="text" class="pop-window-province" value="456" name="pop-window-province">
+                省份:   <input type="text" class="pop-window-province" value="" name="pop-window-province" placeholder="打卡省份">
             </div>
             <div class="pop-window-city-div">
-                城市:   <input type="text" class="pop-window-city" value="789" name="pop-window-city">
+                城市:   <input type="text" class="pop-window-city" value="" name="pop-window-city" placeholder="打卡城市">
             </div>
             <div class="buttons-div">
                 <input type="submit" class="pop-window-submit" value="提交">
@@ -43,4 +43,6 @@
         </form>
     </div>
 </div>
+<!-- 创建task按钮 -->
+<div class="create-task-btn" title="创建新task" onclick="createWindow()"></div>
 {% endblock %}
