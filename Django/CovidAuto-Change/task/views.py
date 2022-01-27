@@ -56,3 +56,17 @@ def submit_tasks(request):
             return redirect('https://bilibili.com') # 出现无法创建task错误
     else: # 如果未登录，则跳转登录界面
         return redirect('/login_page/')
+
+# 删除task方法
+def delete_tasks(request):
+    if request.user.username != '': # 如果登录成功
+        task_id = request.POST.get('task-id', '') # 获取task_id
+        try:
+            task = Task.objects.filter(id = int(task_id))[0]
+            task.delete()
+
+            return redirect('/task/')
+        except:
+            return redirect('https://bilibili.com') # 出现无法删除task错误
+    else: # 如果未登录，则跳转登录界面
+        return redirect('/login_page/')
