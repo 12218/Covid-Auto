@@ -10,6 +10,7 @@ name = "mirrorsaliyun"
 
 [packages]
 django = {version = "*", index = "mirrorsaliyun"}
+requests = {version = "*", index = "mirrorsaliyun"}
 
 [dev-packages]
 
