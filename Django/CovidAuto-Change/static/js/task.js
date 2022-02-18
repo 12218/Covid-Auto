@@ -14,7 +14,8 @@ function popWindow(obj) {
     var ele3 = obj.childNodes[3].childNodes[1].innerHTML.split(':')[1];
     var ele4 = obj.childNodes[3].childNodes[3].innerHTML.split(':')[1];
     var ele5 = obj.childNodes[3].childNodes[5].innerHTML.split(':')[1];
-    console.log(ele1, ele2, ele3, ele4, ele5);
+    var ele6 = obj.childNodes[3].childNodes[9].innerHTML.split(':')[1];
+    console.log(ele1, ele2, ele3, ele4, ele5, ele6);
     var window = document.getElementById('window-background');
     window.style.display = 'block';
     console.log(window);
@@ -22,12 +23,14 @@ function popWindow(obj) {
     var pop_window_title = document.getElementsByClassName('pop-window-title')[0];
     var pop_window_province = document.getElementsByClassName('pop-window-province')[0];
     var pop_window_city = document.getElementsByClassName('pop-window-city')[0];
+    var pop_window_coordinate = document.getElementsByClassName('pop-window-coordinate')[0];
 
     var checkbox_input = document.getElementsByClassName('pop-window-on-or-off')[0];
 
     pop_window_title.setAttribute('value', ele2);
     pop_window_province.setAttribute('value', ele3);
     pop_window_city.setAttribute('value', ele4);
+    pop_window_coordinate.setAttribute('value', ele6);
     // 判断checkbox是否勾选
     if(ele5 == 'True') {
         checkbox_input.checked = true;

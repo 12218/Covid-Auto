@@ -186,7 +186,7 @@ div.items div.item-content {
     padding-left: 10px;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     align-items: center;
     color: white;
     font-family: 'ZCOOL KuaiLe', cursive;
@@ -225,7 +225,7 @@ form.pop-window-form {
 }
 
 form.pop-window-form div {
-    height: 20%;
+    height: 16.6%;
     line-height: 100px;
     font-size: 25px;
 }

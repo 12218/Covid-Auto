@@ -15,6 +15,8 @@
                 <div class="location-province">省份:{{ task.task_province }}</div>
                 <div class="location-city">城市:{{ task.task_city }}</div>
                 <div class="on-off">状态:{{ task.on_or_off }}</div>
+                <div class="coordinate">坐标:{{ task.task_coordinate|truncatechars:7 }}...</div>
+                <div class="coordinate-hidden" style="display: none;">隐藏坐标:{{ task.task_coordinate }}</div>
             </div>
         </div>
     {% endfor %}
@@ -38,6 +40,9 @@
             </div>
             <div class="pop-window-city-div">
                 城市:   <input type="text" class="pop-window-city" value="" name="pop-window-city" placeholder="打卡城市">
+            </div>
+            <div class="pop-window-coordinate-div">
+                坐标:   <input type="text" class="pop-window-coordinate" value="" name="pop-window-coordinate" placeholder="打卡坐标">
             </div>
             <div class="buttons-div">
                 <input type="submit" class="pop-window-submit" value="提交">

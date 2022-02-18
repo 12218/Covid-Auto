@@ -42,6 +42,7 @@ def submit_tasks(request):
         pop_window_title = request.POST.get('pop-window-title', '')
         pop_window_province = request.POST.get('pop-window-province', '')
         pop_window_city = request.POST.get('pop-window-city', '')
+        pop_window_coordinate = request.POST.get('pop-window-coordinate', '')
 
         try:
             task = Task.objects.filter(id = int(task_id))[0]
@@ -50,6 +51,7 @@ def submit_tasks(request):
             task.task_province = pop_window_province
             task.task_city = pop_window_city
             task.on_or_off = pop_window_on_or_off
+            task.task_coordinate = pop_window_coordinate
             task.save()
 
             return redirect('/task/')
@@ -82,6 +84,7 @@ def create_tasks(request):
         pop_window_title = request.POST.get('pop-window-title', '')
         pop_window_province = request.POST.get('pop-window-province', '')
         pop_window_city = request.POST.get('pop-window-city', '')
+        pop_window_coordinate = request.POST.get('pop-window-coordinate', '')
 
         try:
             task = Task() # 新建task
@@ -90,6 +93,7 @@ def create_tasks(request):
             task.task_province = pop_window_province
             task.task_city = pop_window_city
             task.on_or_off = pop_window_on_or_off
+            task.task_coordinate = pop_window_coordinate
             task.save()
 
             return redirect('/task/')

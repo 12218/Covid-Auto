@@ -9,6 +9,7 @@ class Task(models.Model):
     task_title = models.CharField(max_length = 50) # 任务名称
     task_province = models.CharField(max_length = 20) # 省份
     task_city = models.CharField(max_length = 30) # 城市
+    task_coordinate = models.CharField(max_length = 50, default = '') # 坐标
     # task_username = models.CharField(max_length = 20) # 姓名
     # task_stu_id = models.CharField(max_length = 20) # 学号
     # task_phone = models.CharField(max_length = 20) # 电话号码
