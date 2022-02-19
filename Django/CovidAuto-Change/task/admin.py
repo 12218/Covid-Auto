@@ -4,7 +4,7 @@ from .models import Task, Info
 # Register your models here.
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('id', 'task_owner', 'on_or_off', 'task_title', 'task_province', 'task_city')
+    list_display = ('id', 'task_owner', 'on_or_off', 'task_title', 'task_province', 'task_city', 'task_coordinate')
 
 @admin.register(Info)
 class InfoAdmin(admin.ModelAdmin):
