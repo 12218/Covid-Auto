@@ -16,7 +16,7 @@ user_data = cu.fetchall()
 for data in task_data:
     # print(data)
     for user in user_data:
-        if data[5] == user[0]:
+        if data[5] == user[10]:
             # print(user, data)
             task_title = data[2]
             task_province = data[3]
