@@ -21,6 +21,7 @@ for data in task_data:
             task_title = data[2]
             task_province = data[3]
             task_city = data[4]
+            task_coordinate = data[6]
             task_username = user[1]
             task_stu_id = user[2]
             task_phone = user[3]
@@ -32,10 +33,11 @@ for data in task_data:
             vt = user[8]
             UUkey = user[9]
 
-            task = covid.post(task_province, task_city, task_username,
+            task = covid.post(task_province, task_city, task_coordinate, task_username,
                 task_stu_id, task_phone, task_institution, task_form_id,
                 vjuid, vjvd, vt, UUkey)
-            print(task.task_username, task.clock_in()['m'], task.data['riqi'], task.data['tiwen'], task.data['tiwen1'], task.data['tiwen2'])
+            status_code = task.locate()
+            print(task.task_username, task.clock_in()['m'], task.data['riqi'], task.data['tiwen'], task.data['tiwen1'], task.data['tiwen2'], '定位:' + status_code)
 
 # for data in user_data:
 #     print(data)
